@@ -1,0 +1,2 @@
+'\./loader\.html\?url=(.*?)&name=(.*?)'\)"
+\t{\n\t\t"url": "$1",\n\t\t"name": "$2",\n\t\t"hosted": true\n\t},

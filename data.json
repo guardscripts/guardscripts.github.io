@@ -1,0 +1,107 @@
+[
+	{
+		"url": "%s/cookie/",
+		"name": "Cookie Clicker",
+		"hosted": true
+	},
+	{
+		"url": "%s/retro-bowl/retro.html",
+		"name": "Retro Bowl",
+		"hosted": true
+	},
+	{
+		"url": "%s/2048/",
+		"name": "2048",
+		"hosted": true
+	},
+	{
+		"url": "%s/slope/",
+		"name": "Slope",
+		"hosted": true
+	},
+	{
+		"url": "%s/bob/bob.html",
+		"name": "Tunnel Rush",
+		"hosted": true
+	},
+	{
+		"url": "%s/agario-minigame/dots.html",
+		"name": "Agar.io Dots Minigame",
+		"hosted": true
+	},
+	{
+		"url": "%s/gameboy/gameboydir.html",
+		"name": "GameBoy Games",
+		"hosted": true
+	},
+	{
+		"url": "%s/bloons1.html",
+		"name": "Bloons TD",
+		"hosted": true
+	},
+	{
+		"url": "%s/bloons.html",
+		"name": "Bloons TD 2",
+		"hosted": true
+	},
+	{
+		"url": "%s/basketball-stars/",
+		"name": "Basketball Stars",
+		"hosted": true
+	},
+	{
+		"url": "%s/snake/",
+		"name": "Snake",
+		"hosted": true
+	},
+	{
+		"url": "%s/sm64/",
+		"name": "Super Mario 64",
+		"hosted": true
+	},
+	{
+		"url": "%s/paperio2/",
+		"name": "Paper.io 2",
+		"hosted": true
+	},
+	{
+		"url": "%s/eagle/",
+		"name": "Minecraft",
+		"hosted": true
+	},
+	{
+		"url": "%s/bb/",
+		"name": "Burrito Bison",
+		"hosted": true
+	},
+	{
+		"url": "%s/lol/",
+		"name": "1v1.lol",
+		"hosted": true
+	},
+	{
+		"url": "%s/run3/",
+		"name": "Run 3",
+		"hosted": true
+	},
+	{
+		"url": "%s/geo.html",
+		"name": "Geometry Dash",
+		"hosted": true
+	},
+	{
+		"url": "https://rudolph-the-red-nosed-reindeer.ga/tam-vex-5/",
+		"name": "Vex 5",
+		"hosted": false
+	},
+	{
+		"url": "%s/motox3m/",
+		"name": "Moto X3M",
+		"hosted": true
+	},
+	{
+		"url": "%s/yohoho/",
+		"name": "Yohoho.io",
+		"hosted": true
+	}
+]
