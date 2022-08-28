@@ -155,6 +155,9 @@ button:hover .button-text {
                     iframe.style.height = '100%';
                     iframe.style.margin = '0';
                     iframe.src = url;
+					window.myIframe = iframe.contentWindow;
+					window.addEventListener("keydown", function(evt) { myIframe.myKeydownEventHandler(evt); });
+
                     win.document.body.appendChild(iframe);
                     
 

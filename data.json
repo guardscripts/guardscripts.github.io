@@ -57,6 +57,7 @@
 	{
 		"url": "%s/sm64/",
 		"name": "Super Mario 64",
+		"noloader": true,
 		"hosted": true
 	},
 	{
