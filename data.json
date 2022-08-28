@@ -1,8 +1,8 @@
 [
 	{
-		"url": "%s/cookie/",
+		"url": "https://rudolph-the-red-nosed-reindeer.ga/tmm-cookieclicker/",
 		"name": "Cookie Clicker",
-		"hosted": true
+		"hosted": false
 	},
 	{
 		"url": "%s/retro-bowl/retro.html",
@@ -104,5 +104,10 @@
 		"url": "%s/yohoho/",
 		"name": "Yohoho.io",
 		"hosted": true
+	},
+	{
+		"url": "https://rudolph-the-red-nosed-reindeer.ga/tam-madalin-cars-multiplayer/",
+		"name": "Mandalin Cars Multiplayer",
+		"hosted": false
 	}
 ]

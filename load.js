@@ -12,9 +12,8 @@ fetch('./data.json')
         url = element.url
         buttonName = element.name
         a.classList.add("game")
-        if (element.hosted) { url = url.replace('%s',`//${window.location.hostname}/`); } else { a.classList.add("warning") }
-        if (element.noloader) { a.href=url }
-        else { a.onclick = () => {window.open(`./loader.html?url=${url}&name=${buttonName}`)} }
+        if (element.hosted) { url = url.replace('%s',`//${window.location.hostname}`); } else { a.classList.add("warning") }
+        if (typeof element.noloader != "undefined" && element.noloader) { a.href=url } else { a.setAttribute('onclick',`window.open('./loader.html?url=${url}&name=${buttonName}')`)}
         a.textContent = buttonName
         list.appendChild(a);
     });
