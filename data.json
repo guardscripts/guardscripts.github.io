@@ -30,9 +30,9 @@
 		"hosted": true
 	},
 	{
-		"url": "%s/gameboy/gameboydir.html",
-		"name": "GameBoy Games",
-		"hosted": true
+		"url": "https://drive.google.com/drive/folders/1Fa0E3128_Fq0UTCtHmctLFYdK7BNsH0O",
+		"name": "\"No Games\" Drive",
+		"hosted": false
 	},
 	{
 		"url": "%s/bloons1.html",
