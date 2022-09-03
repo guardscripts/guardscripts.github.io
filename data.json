@@ -110,5 +110,16 @@
 		"url": "https://rudolph-the-red-nosed-reindeer.ga/tam-madalin-cars-multiplayer/",
 		"name": "Mandalin Cars Multiplayer",
 		"hosted": false
+	},
+	{
+		"url": "https://www.officialbigfoot.ga/v3",
+		"name": "Big Foot 200+ Games",
+		"noloader":true,
+		"hosted": false
+	},
+	{
+		"url": "%s/chat.html",
+		"name": "Live Chat",
+		"hosted": true
 	}
 ]
