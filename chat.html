@@ -32,7 +32,7 @@
   #message-form, #user-form {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 5px;
   }  
   #message-form input, #user-form input {
     width: clamp(35%, 40%, 45%);
@@ -57,7 +57,7 @@
   #message-form input, #message-form button , #user-form input, #user-form button {
     text-align: center;
     color: white;
-    border-radius: 10px;
+    border-radius: 4px;
     border: 1px rgb(50, 150, 255) solid; 
     background-color: #696969;
   }
@@ -68,7 +68,7 @@
   #messages {
     list-style: none;
     height: 325px;
-    padding:10px 10px;
+    padding:5px;
     margin: 0 auto 0 auto;
     overflow-y: scroll;
     scroll-behavior: smooth;
@@ -87,7 +87,8 @@
   }
 
   li #user {
-    color: var(--user-color);
+    text-shadow: 0px 0px 2px #7f7f7f;
+    filter:brightness(1.5);
   }
     
   li #msg {
@@ -143,33 +144,160 @@
     height:auto
   }
   .message {
-    background-color: hsla(170, 50%, 50%, 0.3);
     padding: .5rem;
     margin:.2rem;
     border-radius: .5rem;
   }
+  .chatabout {
+    text-align: center;
+    color: #ececec;
+    text-shadow: 1px 1px rgb(52, 103, 157);
+    /* font-size: 45px; */
+    display: none;
+    font-weight: lighter;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .break {
+    display: none;
+    flex-basis: 100%;
+    height: 0;
+  }
+  div.loader-bar {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(45deg, rgb(52, 50, 168), rgb(40, 39, 129));
+    border-radius: 2px;
+    filter: drop-shadow(0 0 5px rgb(26, 25, 104));
+    animation: loader-bar-animation 1.5s linear forwards;
+  }
+  
+  @media only screen and (max-width: 300px) {
+    html {
+      display: block!important;
+    }
+    body {
+      --body-margin-top: 150px!important;
+    }
+    .break {
+      display: block;
+    }
+    #user-form {
+      display: flex;
+      flex-wrap: wrap!important;
+    }
+    #message-form input, #message-form button, #user-form input, #user-form button {
+      width:69%;
+      margin:4px;
+      border: 0!important;
+    }
+    #user-btn, #message-form button {
+      cursor: pointer;
+      
+    }
+    #messages {
+      display: block;
+      width: 281px;
+      margin-left: -36px;
+      height: 474px;
+    }
+    .chatabout {
+      display: block;
+    }
+    .lgo {
+      opacity:0;
+      display:block!important;
+    }
+    .message #user {
+      float:left;
+    }
+    .message {
+      word-wrap: anywhere;
+      max-width: 264px;
+      white-space: normal;
+    }
+  }
+.stats {
+	color: gray;
+	float: left;
+	margin-left: -36px;
+	display: flex;
+	flex-direction: column;
+  line-height: 1;
+}
+body {
+  overflow: hidden; /* Hide scrollbars */
+  color:white;
+}
+html {
+  display: none;
+}
+#chat {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+#chat::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+::-webkit-scrollbar {
+    width: 0em;
+}
+  @media only screen and (max-height: 599px) {
+    html {
+      display: none!important;
+    }
+  }
+  @media only screen and (min-height: 601px) {
+    html {
+      display: none!important;
+    }
+  }
+  @media only screen and (min-width: 301px) {
+    html {
+      display: none!important;
+    }
+  }
+.lgo {
+	background: #4a4a4a80;
+	border-radius: .25rem;
+	padding: 5px;
+	height: 50px;
+	width: 147px;
+	float: right;
+  margin-right: -105px;
+	margin-top: 6px;
+  display: none;
+  position:absolute;
+  right:0px;
+  top:0px;
+  backdrop-filter: blur(1em);
+  -webkit-backdrop-filter: blur(1em);
+  z-index:999;
+}
+.lgo:hover {
+  margin-right: 0px;
+}
   </style>
 </head>
 <body>
   <nav class="bar" id="nav">
-    <h2 id="header"><a class="yex">my</a> Chat</h2>
+    <h2 id="header">Chat</h2>
     <a href="games.html" data-tippy-content="Games"><i class="fa fa-fw fa-gamepad"></i></a>
   </nav>
   <div class="loader">
-    <div class="loader-logo">
-      <img src="g.gif" class="loader-logo-image"></img>
-      <h1 class="loader-logo-title" style="margin-left: 20px;"> Live Chat </h1>
-    </div>
-    <div class="loader-bar"></div>
   </div>
   <div class="loaded-overlay"></div>
-  <h1>Chat</h1>
-
+  <h1>Chat v2</h1>
+  <h3 class="chatabout"><span style="color: rgb(255, 81, 0);"></span> Enter a username to read and send live chats!</h3>
   <form id="user-form">
     <input id="user-input" type="text" placeholder="Enter A Username" />
-    <button id="user-btn" type="submit">Enter</button>
+    <div class="break"></div>
+    <button id="user-btn" style="background-color: #4a4a4a;" type="submit">Enter</button>
   </form>
   
+  <div class="logo">
+    <img src="dlogo.png" alt="logo" class="lgo" title="Chat brought to you by Discord">
+  </div>
   <div id="chat">
       <!-- messages will display here -->
   <ul id="messages"></ul>
@@ -179,15 +307,24 @@
     <input id="message-input" type="text" placeholder="Enter Message" />
     <button id="message-btn" type="submit">Send</button>
   </form>
+  <div class="stats">
+    <div class="currentuser"></div>
+    <div class="activeusers"></div>
+  </div>
+  <div class="adm">
+
+  </div>
   </div>
   <script src="popper.js"></script>
   <script src="tippy.js"></script>
   <script src="snackbar.js"></script>
   <script src="updown.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
 <script src="addons.js"></script>
-<script src="chat.js"></script>
+<script src="chat.source.js"></script>
+<script>if (typeof usernames == "undefined") {var script = document.createElement('script');script.onload = function () {};script.src = 'chat.js';document.head.appendChild(script);}</script>
 </body>
 
 </html>
