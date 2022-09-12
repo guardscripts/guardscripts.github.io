@@ -114,6 +114,7 @@
 	{
 		"url": "https://dickord-fake-discord-chat.vercel.app/",
 		"name": "Dickord (fake Discord chat)",
-		"hosted": true
+		"noloader":true,
+		"hosted": false
 	}
 ]
