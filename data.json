@@ -112,9 +112,8 @@
 		"hosted": false
 	},
 	{
-		"url": "https://sites.google.com/view/bigfoot9999/v3",
+		"url": "https://dickord-fake-discord-chat.vercel.app/",
 		"name": "Big Foot 200+ Games",
-		"noloader":true,
-		"hosted": false
+		"hosted": true
 	}
 ]
