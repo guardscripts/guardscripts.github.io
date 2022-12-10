@@ -1,5 +1,10 @@
 [
 	{
+		"url": "https://terb.vercel.app",
+		"name": "TERB Custom Proxy Browser",
+		"hosted": false
+	},
+	{
 		"url": "https://lightspeedtrouble.glitch.me/?q",
 		"name": "Search Via Proxy",
 		"hosted": false
